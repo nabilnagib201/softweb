@@ -1,0 +1,29 @@
+        :root {
+            --main-blue: #003366;
+            --main-orange: #f39c12;
+            --light-bg: #f8f9fa;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--light-bg); }
+        
+        /* Header */
+        .navbar { background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-link { color: var(--main-blue) !important; font-weight: bold; }
+        .btn-orange { background-color: var(--main-orange); color: white; border-radius: 20px; }
+
+        /* Hero Section */
+        .hero { padding: 80px 0; background: linear-gradient(135deg, white 60%, #eef2f7 100%); text-align: center; }
+        .hero h1 { color: var(--main-blue); font-weight: 800; font-size: 3rem; }
+        .hero span { color: var(--main-orange); }
+
+        /* Section Titles */
+        .section-title { position: relative; margin-bottom: 50px; color: var(--main-blue); }
+        .section-title::after { content: ''; width: 60px; height: 3px; background: var(--main-orange); position: absolute; bottom: -10px; right: 0; }
+
+        /* Cards */
+        .card { border: none; border-radius: 15px; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .card:hover { transform: translateY(-10px); }
+        .card-edu { border-top: 5px solid var(--main-blue); }
+        .card-biz { border-top: 5px solid var(--main-orange); }
+
+        footer { background: var(--main-blue); color: white; padding: 30px 0; margin-top: 50px; }
