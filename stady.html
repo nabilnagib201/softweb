@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>شرح HTML و CSS و JS</title>
+    <!-- ربط ملف التنسيقات الخارجي -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <!-- ===========================
+         القسم العلوي (Navbar)
+         =========================== -->
+    <div class="navbar">
+        <a href="index.html" class="btn-orange">الرئيسية</a>
+        <a href="index.html#students" class="nav-link">قسم الطلاب</a>
+        <a href="index.html#pricing" class="nav-link">عروض</a>
+        <a href="index.html#contact" class="nav-link">تواصل معنا</a>
+    </div>
+
+    <!-- ===========================
+         قسم الترحيب (Hero Section)
+         =========================== -->
+    <section class="hero">
+        <h1>تعلم <span>HTML</span>, <span>CSS</span>, <span>JS</span></h1>
+        <p>أساسيات بناء صفحات الويب بشكل مبسط مع أمثلة عملية</p>
+        <button class="btn-orange" onclick="changeBg()">جرّب التفاعل</button>
+    </section>
+
+    <!-- ===========================
+         قسم الشرح (Cards)
+         =========================== -->
+    <div class="cards">
+        <!-- بطاقة HTML -->
+        <div class="card card-edu">
+            <h2 class="section-title">HTML</h2>
+            <p>هي لغة توصيف تُستخدم لبناء هيكل الصفحة. كل عنصر يُكتب داخل وسم (Tag).</p>
+            <p><b>مثال:</b></p>
+            <pre>
+&lt;h1&gt;عنوان رئيسي&lt;/h1&gt;
+&lt;p&gt;فقرة نصية&lt;/p&gt;
+&lt;img src="image.jpg" alt="صورة"&gt;
+            </pre>
+            <p>في المثال أعلاه:  
+            - &lt;h1&gt; لكتابة عنوان.  
+            - &lt;p&gt; لكتابة فقرة.  
+            - &lt;img&gt; لإضافة صورة.</p>
+        </div>
+
+        <!-- بطاقة CSS -->
+        <div class="card card-biz">
+            <h2 class="section-title">CSS</h2>
+            <p>تُستخدم لتنسيق الصفحة: الألوان، الخطوط، الخلفيات، وتوزيع العناصر.</p>
+            <p><b>مثال:</b></p>
+            <pre>
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: #003366;
+    text-align: center;
+}
+p {
+    color: #f39c12;
+}
+            </pre>
+            <p>في المثال أعلاه:  
+            - الخلفية بلون فاتح.  
+            - العنوان باللون الأزرق ومُحاذى للوسط.  
+            - الفقرة باللون البرتقالي.</p>
+        </div>
+
+        <!-- بطاقة JavaScript -->
+        <div class="card card-edu">
+            <h2 class="section-title">JavaScript</h2>
+            <p>لغة برمجة تضيف التفاعل للصفحة مثل الأزرار والرسائل.</p>
+            <p><b>مثال:</b></p>
+            <pre>
+&lt;button onclick="sayHello()"&gt;اضغط هنا&lt;/button&gt;
+
+&lt;script&gt;
+function sayHello() {
+    alert("مرحبا بالعالم!");
+}
+&lt;/script&gt;
+            </pre>
+            <p>في المثال أعلاه:  
+            - زر عند الضغط عليه يستدعي دالة.  
+            - الدالة تعرض رسالة منبثقة.</p>
+        </div>
+    </div>
+
+    <!-- ===========================
+         قسم إضافي: جدول HTML
+         =========================== -->
+    <section class="extra">
+        <h2 class="section-title">مثال على جدول HTML</h2>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <tr>
+                <th>الاسم</th>
+                <th>العمر</th>
+                <th>المستوى</th>
+            </tr>
+            <tr>
+                <td>أحمد</td>
+                <td>15</td>
+                <td>ثانوي</td>
+            </tr>
+            <tr>
+                <td>سارة</td>
+                <td>14</td>
+                <td>إعدادي</td>
+            </tr>
+        </table>
+        <p>الجداول تُستخدم لعرض البيانات بشكل منظم.</p>
+    </section>
+
+    <!-- ===========================
+         قسم إضافي: نموذج HTML
+         =========================== -->
+    <section class="extra">
+        <h2 class="section-title">مثال على نموذج HTML</h2>
+        <form onsubmit="return validateForm()">
+            <label>الاسم:</label>
+            <input type="text" id="name"><br><br>
+            <label>البريد الإلكتروني:</label>
+            <input type="email" id="email"><br><br>
+            <button type="submit" class="btn-orange">إرسال</button>
+        </form>
+        <p>النماذج تُستخدم لجمع بيانات المستخدم.</p>
+    </section>
+
+    <!-- ===========================
+         الفوتر (Footer)
+         =========================== -->
+    <footer>
+        <p>© 2026 - صفحة تعليمية مبسطة</p>
+    </footer>
+
+    <!-- ===========================
+         JavaScript (تفاعلات)
+         =========================== -->
+    <script>
+        // تغيير لون الخلفية عند الضغط على الزر
+        function changeBg() {
+            document.body.style.backgroundColor = "#e6f7ff";
+            alert("تم تغيير الخلفية!");
+        }
+
+        // التحقق من النموذج
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+
+            if(name === "" || email === "") {
+                alert("من فضلك أدخل جميع البيانات");
+                return false;
+            } else {
+                alert("تم إرسال النموذج بنجاح");
+                return true;
+            }
+        }
+    </script>
+
+</body>
+</html>
