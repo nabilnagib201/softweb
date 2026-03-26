@@ -173,7 +173,7 @@ footer {
     <section class="hero">
         <h1>تعلم <span>HTML</span>, <span>CSS</span>, <span>JS</span></h1>
         <p>أساسيات بناء صفحات الويب بشكل مبسط مع أمثلة عملية</p>
-        <button class="btn-orange" onclick="changeBg()">جرّب التفاعل</button>
+        <button class="btn-orange" onclick="window.location.href='https://www.instagram.com/soft_wep/'">تواصل اذا لم تفهم</button>
     </section>
 
     <div class="cards">
@@ -183,13 +183,22 @@ footer {
             <p><b>مثال:</b></p>
             <pre>
 &lt;h1&gt;عنوان رئيسي&lt;/h1&gt;
+&lt;!--لاحظ التعليق--&gt;
 &lt;p&gt;فقرة نصية&lt;/p&gt;
 &lt;img src="image.jpg" alt="صورة"&gt;
+&lt;h2&gt;عنوان لكن اصغر قليلا&lt;/h2&gt;
+&lt;h3&gt;عنوان لكن اصغر&lt;/h3&gt;
+&lt;h4&gt;عنوان يصغر كل ما زاد رقم&lt;/h4&gt;
+
             </pre>
-            <p>في المثال أعلاه:  
-            - &lt;h1&gt; لكتابة عنوان.  
-            - &lt;p&gt; لكتابة فقرة.  
-            - &lt;img&gt; لإضافة صورة.</p>
+        <p>
+                في المثال أعلاه:  <br>
+            - &lt;h1&gt; لكتابة عنوان.  <br>
+            - &lt;p&gt; لكتابة فقرة.  <br>
+            - &lt;img&gt; لإضافة صورة. <br>
+            - &lt;h2&gt; كتابه عنوان اصغر. <br>
+            - &lt;!--coment--&gt; لكتابه تعليق. <br>
+        </p>
         </div>
 
         <div class="card card-biz">
@@ -198,21 +207,27 @@ footer {
             <p><b>مثال:</b></p>
             <pre>
 body {
-    background-color: #f8f9fa;
-    font-family: Arial, sans-serif;
+    background-color: black;
+    font = blood;
 }
 h1 {
-    color: #003366;
+    color: blue;
     text-align: center;
 }
 p {
-    color: #f39c12;
+    color: white;
+}
+h1:hover{
+    color= red;
 }
             </pre>
-            <p>في المثال أعلاه:  
-            - الخلفية بلون فاتح.  
-            - العنوان باللون الأزرق ومُحاذى للوسط.  
-            - الفقرة باللون البرتقالي.</p>
+        <p>
+            في المثال أعلاه: <br>  
+            - الخلفية بلون الاسود.  <br>
+            - العنوان باللون الأزرق ومُحاذى للوسط. <br>  
+            - الفقرة باللون الابيض. <br>
+            - عند تقريب مؤشر الفاره من العنوان يتحول لونه الي الاحمر
+        </p>
         </div>
 
         <div class="card card-edu">
@@ -220,17 +235,27 @@ p {
             <p>لغة برمجة تضيف التفاعل للصفحة مثل الأزرار والرسائل.</p>
             <p><b>مثال:</b></p>
             <pre>
-&lt;button onclick="sayHello()"&gt;اضغط هنا&lt;/button&gt;
-
-&lt;script&gt;
-function sayHello() {
-    alert("مرحبا بالعالم!");
-}
-&lt;/script&gt;
+//coment
+console.log("string");
+console.log(num);
+let num = 0;
+let str = "string";
+if (num == 0){
+    console.log("wow");
+} else if (str == "string"){
+    console.log("cool");
+} else{ console.log("bad");}
             </pre>
-            <p>في المثال أعلاه:  
-            - زر عند الضغط عليه يستدعي دالة.  
-            - الدالة تعرض رسالة منبثقة.</p>
+        <p>
+             في المثال أعلاه: <br>  
+            - في السطر الاول كيفيه كتابه تعليق. <br>  <br>
+            - السطر الثاني لاحظ كيفيه طباعه نص في لوحه تحكم. <br><br>
+            - السطر الثالث لاحظ كيفيه طباعه رقم في لوحه تحكم. <br><br>
+            - السطر رابع اعلان عن متغير و اعطائه قيمه عدديه. <br><br>
+            - السطر الخامس اعلان عن متغير و اعطائه قيمه نصيه.<br><br>
+            - السطر السادس الي العاشر لاحظ كتابه جمل الشرطيه و لاحظ ان هناك علامتان يساوي. <br><br>
+            -سطر الاخير لاحظ عدم كتابه اي شروط.
+        </p>
         </div>
     </div>
 
